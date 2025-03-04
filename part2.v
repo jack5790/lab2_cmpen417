@@ -13,13 +13,6 @@ module part2 #(parameter AWIDTH = 18, BWIDTH = 18)(
     reg signed [(AWIDTH+BWIDTH)-1:0] ABmul, abmul, Abmul, aBmul;
     reg signed [(AWIDTH+BWIDTH)-1:0] sum_real, sum_imag;
     
-    initial begin
-        Ain = 0;
-        ain = 0;
-        Bin = 0;
-        bin = 0;
-    end
-    
     always @(posedge clk) begin
         // Input Registers
         Ain <= ar;
