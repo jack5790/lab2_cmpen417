@@ -20,10 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module part1 # (parameter AWIDTH = 16, BWIDTH = 18)(
+module part1 # (parameter AWIDTH = 18, BWIDTH = 18)(
         input clk,
         input signed [AWIDTH-1:0]       ar, ai,
-        input signed [BWIDTh-1:0]       br, bi,
+        input signed [BWIDTH-1:0]       br, bi,
         output signed [AWIDTH+BWIDTH:0] pr, pi
     );
     
