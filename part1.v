@@ -29,8 +29,8 @@ module part1 # (parameter AWIDTH = 18, BWIDTH = 18)(
     
     reg signed [AWIDTH-1:0] ai_d, ai_dd, ai_ddd, ai_dddd;
     reg signed [AWIDTH-1:0] ar_d, ar_dd, ar_ddd, ar_dddd;
-    reg signed [BWIDTH-1:0] bi_d, bi_dd, bi_ddd, bi_dddd;
-    reg signed [BWIDTH-1:0] br_d, br_dd, br_ddd, br_dddd;
+    reg signed [BWIDTH-1:0] bi_d, bi_dd, bi_ddd;
+    reg signed [BWIDTH-1:0] br_d, br_dd, br_ddd;
     
     reg signed [AWIDTH:0] addcommon;
     reg signed [BWIDTH:0] addr, addi;
@@ -61,7 +61,7 @@ module part1 # (parameter AWIDTH = 18, BWIDTH = 18)(
         ar_ddd <= ar_dd;
         ar_dddd <= ar_ddd;
         addr <= br_ddd - bi_ddd;
-        multr <= addr * ar_ddd;
+        multr <= addr * ar_dddd;
         commonr1 <= common;
         pr_int <= multr + commonr1;
     end
