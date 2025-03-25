@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
 
-module part2 #(parameter AWIDTH = 18, BWIDTH = 18)(
+module multiplier #(parameter AWIDTH = 16, BWIDTH = 16)(
     input wire clk,
-    input wire signed [17:0] ar, ai,
-    input wire signed [17:0] br, bi,
+    input wire signed [(AWIDTH-1):0] ar, ai,
+    input wire signed [(BWIDTH-1):0] br, bi,
     output wire signed [(AWIDTH+BWIDTH)-1:0] pr, pi
 );
     
